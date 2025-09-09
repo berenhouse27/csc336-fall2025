@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Assignment2</title>
+  <style>
+    body {
+        margin: 35px;
+        background-color: cornsilk;
+        font:'Times New Roman';
+    }
+    h1{
+        font-size: 20px;
+        padding:3px;
+        text-align:center;
+    }
+    p{
+        font-size: 15px;
+    }
+    footer{
+        position:fixed;
+        bottom: 0;
+        background-color:rgb(168, 209, 250);
+        color:rgb(19, 50, 20);
+        text-align:center;
+        width: 100%;
+        padding: 2px;
+    }
+    .bighighlight:hover{
+        font-size:larger;
+        background-color:chartreuse;
+        font-family:cursive;
+    }
+    .redact:hover{
+        color:rgb(0, 0, 0);
+        background-color: rgb(0, 0, 0);
+    }
+    .emphasize:hover{
+        text-transform:uppercase;
+        font-size:130%;
+    }
+    .card{
+        border: 1px solid;
+        border-radius:10px;
+        border-color:rgb(0, 0, 0);
+        padding: 1px;
+        background-color: rgb(189, 218, 219);
+        width:500px;
+        height:300px;
+    }
+    .card:hover{
+        background-color: rgb(181, 244, 181);
+    }
+    #list{
+        font-size:115%;
+        font-weight: 80%;
+    }
+  </style>
+</head>
+
+<body>
+    <h1>Assignment 2 Submission</h1>
+    <section id="flexbox">
+        <style>
+            nav{
+                display:flex;
+                gap: 15px;
+                padding: 25px;
+                background-color: rgb(183, 99, 99);
+                justify-content: space-around;
+                padding: 5px;
+                border: 2px solid;
+            }
+            nav a{
+                padding:8px;
+            }
+            nav a:hover{
+                background-color:gray;
+                border-radius: 5px;
+            }
+        </style>
+        <nav>
+            <a href="#section1">Redactable List</a>
+            <a href="#section2">Classes</a>
+            <a href="#section3">Butter</a>
+        </nav>
+    </section>
+
+<br><br><br>
+
+    <section class="card" id="section1">
+        <h1>Redactable List</h1>
+        <ul id="list" class="redact">
+            <li>This</li>
+            <li>is</li>
+            <li>a</li>
+            <li>list</li>
+            <li>with</li>
+            <li>many</li>
+            <li>items</li>
+            <li>in</li>
+            <li>it</li>
+        </ul>
+    </section>
+
+<br><br><br>
+
+    <section class="card" id="section2">
+        <h1 class="emphasize">This is a header in a card with a class</h1>
+        <p class="bighighlight">This is a paragraph in a card with a different class</p>
+    </section>
+
+<br><br><br>
+
+    <section class="card" id="section3">
+        <h1>This is my cat, Butter</h1>
+        <p style="text-align: center;">He is on campus with me</p>
+        <img src="cat.jpg" style="height:200px; width: 250px; display:block; margin: 0 auto;">
+    </section>
+
+    <footer>
+        This is my footer, I think it looks handsome
+    </footer>
+</body>

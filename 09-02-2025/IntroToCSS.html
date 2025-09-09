@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Demo</title>
+    <style>
+    Body {
+        background-color: #fa5a5a;
+        margin: 20px;
+    }
+    h1{ color:rgb(249, 176, 176) }
+    p { color: rgb(169, 213, 252) }
+    .class_name{background-color:rgb(200, 3, 200)}
+    .class_name:hover{
+        background-color:aqua;
+        color:black
+    }
+    #id{
+        background-color:blueviolet;
+        color:aquamarine
+    }
+    </style>
+    <h1>Experimenting with CSS</h1>
+</head>
+
+<section>
+    <p>Changing paragraphs using style</p>
+    <p class="class_name">Creating a class and hover highlighting</p>
+    <p id="id">Making an ID</p>
+</section>
+
+<!-- order of priority: inline > id > classes > html element -->
+
+<section id="boxmodel">
+    <h2>Box Model + Visual stying</h2>
+    <style> .card{
+        width:300;
+        margin:100;
+        padding:10px;
+        border:2px solid black;
+        border-radius:12px;
+        box-sizing:border-box;
+        font-family:sans-serif;
+    }
+        .card h3 { margin-top: 0px}
+        .card p {color:blue}
+        .card:hover:first-letter{font-size:30px; color:rgb(118, 214, 124);}
+    </style>
+    <div class="card">
+        <h3> Profile Card </h3>
+        <p class="card"> Some little bit of text </p>
+    </div>
+</section>
+
+<section id="positioning">
+    <h2>Positioning</h2>
+    <style>
+        header.sticky {
+            position: sticky;
+            top: 0;
+            color: white;
+            text-align: center;
+            padding: 5px;
+        }
+    </style>
+    <header>
+        <div class="sticky"> This is more stuff</div>
+    </header>
+</section>
+
+<section id="flexbox">
+    <h2>Flexbox</h2>
+    <style>
+        nav.flex{
+            display: flex;
+            justify-content: space-around;
+            background-color: black;
+            padding: 10px;
+        }
+    </style>
+    <nav class="flex">
+        <p>Hello</p>
+        <p>This is a flexbox</p>
+    </nav>
+</section>
+
+</html>
