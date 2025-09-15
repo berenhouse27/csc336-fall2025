@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Assignment3</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div>
+        <h1>Encode and Decode Messages</h1>
+        <button id="timeSwitch">Night Mode</button>
+    </div>
+    <br>
+    <div class="card">
+        <input type="text" class="textbox" placeholder="Enter Message To Encode">
+        <button class="button">Encode</button>
+        <div class="flex-container">
+            <div class="row">
+                <input id="encode" type="radio" name="choice" value="Encode" checked>
+                <label for="Encode">Encode</label>
+            </div>
+            <div class="row">
+                <input id="decode" type="radio" name="choice" value="Decode">
+                <label for="Decode">Decode</label>
+            </div>
+        </div>
+    </div><br>
+    <div class="card">
+        <h3>Output:</h3>
+        <p id="output"></p>
+    </div>
+    <div>
+        <h2 class="card">History</h2>
+        <div class="flexbox">
+            <div class="history-container card" id="encodeHist">
+                <h3>Encoded:</h3>
+            </div>
+            <div class="history-container card" id="decodeHist">
+                <h3>Decoded:</h3>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
