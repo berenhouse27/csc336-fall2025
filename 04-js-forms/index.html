@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Assignment 4</title>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>DnD Character Creator</h1>
+    <div id="character-container" class="box">
+        <form action="/submit" method="post">
+            <div class="row">
+                <div class="label">
+                    <label for="char-name">Name</label>
+                    <input type="text" id="char-name" name="char-name">
+                </div>
+
+                <div class="label">
+                    <label for="char-class">Class</label>
+                    <select id="char-class" name="char-class">
+                        <option value="Barbarian">Barbarian</option>
+                        <option value="Fighter">Fighter</option>
+                        <option value="Ranger">Ranger</option>
+                        <option value="Rogue">Rogue</option>
+                        <option value="Monk">Monk</option>
+                        <option value="Paladin">Paladin</option>
+                        <option value="Druid">Druid</option>
+                        <option value="Bard">Bard</option>
+                        <option value="Cleric">Cleric</option>
+                        <option value="Wizard">Wizard</option>
+                        <option value="Sorcerer">Sorcerer</option>
+                        <option value="Warlock">Warlock</option>
+                    </select>
+                </div>
+            </div>
+            <button type="button" id="random">Provide Sample Stats</button>
+            <div id="stat-input-container">
+                <div class="stat label">
+                    <label for="str">Strength</label>
+                    <input type="number" class="stat-input" id="str" name="str">
+                </div>
+                <div class="stat label">
+                    <label for="dex">Dexterity</label>
+                    <input type="number" class="stat-input" id="dex" name="dex">
+                </div>
+                <div class="stat label">
+                    <label for="con">Constitution</label>
+                    <input type="number" class="stat-input" id="con" name="con">
+                </div>
+                <div class="stat label">
+                    <label for="int">Intelligence</label>
+                    <input type="number" class="stat-input" id="int" name="int">
+                </div>
+                <div class="stat label">
+                    <label for="wis">Wisdom</label>
+                    <input type="number" class="stat-input" id="wis" name="wis">
+                </div>
+                <div class="stat label">
+                    <label for="cha">Charisma</label>
+                    <input type="number" class="stat-input" id="cha" name="cha">
+                </div>
+            </div>
+
+            <button type="submit" id="submit-char">Submit</button>
+
+        </form>
+    </div>
+    <br>
+    <div class="box">
+        <div class="row">
+            <h2>Party Members</h2>
+            <div class="label">
+                <label for="party-size">Max Party Size</label>
+                <input type="number" id="party-size">
+            </div>
+        </div>
+        <div id="party-container">
+        </div>
+    </div>
+</body>
+</html>

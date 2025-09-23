@@ -1,0 +1,57 @@
+
+body{
+    display: grid;
+    padding: 5px;
+}
+h1{
+    text-align: center;
+}
+button{
+    width: fit-content;
+    height: 25px;
+}
+input{
+    width: 30px;
+}
+#character-container{
+    display: flex;
+    flex-direction: row;
+}
+#stat-input-container{
+    display: flex;
+    flex-direction: row;
+}
+#party-container{
+    display: flex;
+    flex-direction: column;
+}
+#char-name{
+    width: fit-content;
+}
+.box{
+    border: 1px solid;
+    border-radius:5px;
+    border-color:rgb(0, 0, 0);
+    background-color: rgb(160, 205, 166);
+    padding: 10px;
+}
+.row{
+    display: flex;
+    flex-direction: row;
+}
+.stat-container{
+    display: flex;
+    flex-direction: row;
+}
+.stat{
+    padding: 15px;
+}
+.label{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+.stat-input{
+    width: 40px;
+}
+
