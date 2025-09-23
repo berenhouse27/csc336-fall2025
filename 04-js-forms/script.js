@@ -1,35 +1,36 @@
-const partyCap = document.getElementById("party-size");
-const charName = document.getElementById("char-name")
-const charClass = document.getElementById("char-class");
-const randomize = document.getElementById("random");
-const submitChar = document.getElementById("submit-char");
-const partyMembers = document.getElementById("party-container");
-const form = document.querySelector("#character-container form");
-const stats = document.querySelectorAll(".stat-input");
+const partyCap = document.getElementById("party-size");     // Max # of party members
+const charName = document.getElementById("char-name")       // Character name input box
+const charClass = document.getElementById("char-class");    // Charcater class input box
+const randomize = document.getElementById("random");        // Randomize stat button
+const submitChar = document.getElementById("submit-char");  // Submit button
+const partyMembers = document.getElementById("party-container");    // Container for party members
+const form = document.querySelector("#character-container form");   // Form containing character info
+const stats = document.querySelectorAll(".stat-input");             // Collection of stat input fields
 
-var party = [];
+var party = [];     // Array of party members
 
+// Submit Character
 form.addEventListener('submit', event => {
     event.preventDefault();
     var characterName = charName.value;
     var characterClass = charClass.value;
     var characterStats = Array.from(stats).map(input => input.value)
-    var maxPartySize = Number(partyCap.value) || 5;
-    if (characterName == ""){
+    var maxPartySize = Number(partyCap.value) || 5; // Default party limit of 5
+    if (characterName == ""){                       // Name must be filled out
         alert(`ERROR: Must Enter Character Name`)
         return;
     };
-    for (var i=0; i<6; i++){
+    for (var i=0; i<6; i++){                       
         var stat = characterStats[i]
-        if (stat == ""){
+        if (stat == ""){                            // All Stat values must be filled out
             alert(`ERROR: Must Enter All Stat Values`);
             return;
         };
-        if (4 > stat || stat > 24) {
-            alert(`ERROR: ${stat} Is Out of Range (4-24)`);
+        if (4 > stat || stat > 24) {                // All Stat values must be between 4-24 (4d6 dice)
+            alert(`ERROR: ${stat} Is Out of Range (4-24)`); 
             return;
     };
-    if (party.length >= maxPartySize){
+    if (party.length >= maxPartySize){             // Cannot add members beyond party limit
         alert(`ERROR: Maximum Party Size Reached`)
         return;
     };
@@ -44,15 +45,13 @@ form.addEventListener('submit', event => {
         wis: characterStats[4],
         cha: characterStats[5]
     };
-    party.push(character);
-
-    const newMember = createPartyMember(character);
-    partyMembers.innerHTML += newMember;
-
+    party.push(character); // Add member to party list
+    displayPartyMembers(party)
     form.reset();
 });
 
-randomize.addEventListener("click", function() {
+// Stat Randomizer Button
+randomize.addEventListener("click", function() {   
     var statValues = [];
     for (var i=0; i<6; i++){
         var stat = 0;
@@ -67,12 +66,24 @@ randomize.addEventListener("click", function() {
     };
 });
 
+// Generate random num within range 
 function getRandomInt(min, max){
     min = Math.ceil(min);
     max = Math.ceil(max);
     return Math.floor(Math.random() * (max - min + 1)) + min;
 };
 
+// Traverse party list, displaying all members
+function displayPartyMembers(party){
+    partyMembers.innerHTML = "";
+    for (var i=0; i<party.length; i++){
+        const partyMember = party[i];
+        const memberHTML = createPartyMember(partyMember);
+        partyMembers.innerHTML += memberHTML;
+    }
+}
+
+// Format HTML for new member
 function createPartyMember(character){
     return `
     <div class="party-member">
