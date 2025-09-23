@@ -76,7 +76,8 @@ function getRandomInt(min, max){
 function createPartyMember(character){
     return `
     <div class="party-member">
-        <h3>${character.name}: ${character.class}</h3>
+        <span class="entry-name"><b>${character.name}:</b> </span>
+        <span class="entry-class">${character.class}</span>
         <div class="stat-container">
             <div class="label">
                 <label for="str">STR</label>

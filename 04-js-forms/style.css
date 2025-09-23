@@ -54,4 +54,9 @@ input{
 .stat-input{
     width: 40px;
 }
-
+.entry-name{
+    font-size: 20px;
+}
+.entry-class{
+    font-size: 15px;
+}
