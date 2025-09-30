@@ -28,6 +28,8 @@ mood_switch.addEventListener("click", function(){
     if (mode == "chophouse") {
         mode = "dim sum"
         mood_switch.textContent = "Leave"
+        body.style.fontFamily = "'Wonton'"
+        footer.style.fontFamily = "'Wonton'"
         body.style.backgroundColor = "rgba(80, 41, 41, 1)"
         body.style.color = "rgba(193, 173, 55, 1)"
         footer.style.backgroundColor = "rgba(101, 26, 26, 1)"
@@ -36,6 +38,8 @@ mood_switch.addEventListener("click", function(){
     else {
         mode = "chophouse"
         mood_switch.textContent = "Enter..."
+        body.style.fontFamily = "'Times New Roman', Times, serif"
+        footer.style.fontFamily = "'Times New Roman', Times, serif"
         body.style.backgroundColor = "rgba(255, 255, 255, 1)"
         body.style.color = "rgba(0, 0, 0, 1)"
         footer.style.backgroundColor = "rgb(168, 209, 250)"
@@ -78,7 +82,7 @@ function changeBlurb(mode) {
     if (mode == "chophouse")
         rest_blurb.textContent = "... J. Hollinger's Waterman's Chophouse turns into a bustling dim sum speakeasy bar and lounge filled with highest class of socialites and financiers."
     else if (mode == "dim sum")
-        rest_blurb.textContent = "During the Day, a haven for the weary business man looking to get a great meal and an even better drink. But, when the sun sets..."
+        rest_blurb.textContent = "During the Day, a haven for the weary business man looking to get a great meal and an even better drink. But, when the sun sets and the secret entrance unlocks..."
 }
 
 function changeChefImage(mode) {

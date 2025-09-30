@@ -1,5 +1,14 @@
+@font-face {
+    font-family: 'Wonton';
+    src: url('Wonton.ttf') format('woff2');
+}
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+}
+
 h1{
-    font-size: 25px;
+    font-size: 35px;
     text-align: center;
 }
 
@@ -38,6 +47,7 @@ h1{
 }
 
 #footer{
+    font-family: 'Chinese Rocks';
     position:bottom;
     bottom: 0;
     background-color:rgb(168, 209, 250);
