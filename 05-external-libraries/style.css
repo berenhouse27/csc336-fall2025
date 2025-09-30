@@ -1,0 +1,87 @@
+h1{
+    font-size: 25px;
+    text-align: center;
+}
+
+.column-flexbox{
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+}
+
+.row-flexbox{
+    display: flex;
+    flex-direction: row;
+    padding: 5px;
+}
+
+.row-flexbox > div{
+    flex: 1;
+    justify-content: center;
+}
+
+.hours{
+    width: 500px;
+}
+.menu{
+    width: 750px;
+    display: block;
+    margin: 0 auto;
+}
+
+#rest-blurb{
+    justify-content: center;
+    text-align: center;
+    width: 500px;
+    margin: 0 auto;
+    padding: 5px;
+}
+
+#footer{
+    position:bottom;
+    bottom: 0;
+    background-color:rgb(168, 209, 250);
+    color:rgb(19, 50, 20);
+    justify-content: center;
+    width: 100%;
+    padding: 2px;
+}
+
+#chef-image{
+    display: block;
+    margin: 0 auto;
+    padding: 15px;
+}
+
+#footer-image{
+    width:275;
+    height: 185;
+}
+
+#door-container {
+    position: relative;
+    width: 150px;
+    height: 50px;
+    margin: 0 auto;
+    perspective: 600px;
+}
+
+#door {
+    width: 100%;
+    height: 100%;
+    background: rgb(255, 255, 255);
+    transform-origin: left center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+#speakeasy-entrance {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
