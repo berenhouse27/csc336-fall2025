@@ -14,8 +14,15 @@ const body = document.getElementById("body");
 mode = "chophouse";
 door_status = "closed"
 
-chef_image.addEventListener("click", function(){  // Click on chef to open door
-    open_door()
+chef_image.addEventListener("click", function(){  // Click on chef to open / close door
+    if (door_status == "closed") {
+        open_door()
+        door_status = "open"
+    }
+    else if (door_status == "open") {
+        close_door()
+        door_status = "closed"
+    }
 })
 
 mood_switch.addEventListener("click", function(){
@@ -27,46 +34,65 @@ mood_switch.addEventListener("click", function(){
 
     if (mode == "chophouse") {
         mode = "dim sum"
-        mood_switch.textContent = "Leave"
+        mood_switch.textContent = "Return to the Chophouse"
         body.style.fontFamily = "'Wonton'"
         footer.style.fontFamily = "'Wonton'"
         body.style.backgroundColor = "rgba(80, 41, 41, 1)"
         body.style.color = "rgba(193, 173, 55, 1)"
         footer.style.backgroundColor = "rgba(101, 26, 26, 1)"
         footer.style.color = "rgba(193, 173, 55, 1)"
+        door.style.backgroundColor = "rgba(80, 41, 41, 1)"
     }
     else {
         mode = "chophouse"
-        mood_switch.textContent = "Enter..."
+        mood_switch.textContent = "Enter the Dim Sum Speakeasy Palace"
         body.style.fontFamily = "'Times New Roman', Times, serif"
         footer.style.fontFamily = "'Times New Roman', Times, serif"
         body.style.backgroundColor = "rgba(255, 255, 255, 1)"
         body.style.color = "rgba(0, 0, 0, 1)"
         footer.style.backgroundColor = "rgb(168, 209, 250)"
         footer.style.color = "rgb(19, 50, 20)"
-        close_door()
+        door.style.backgroundColor = "rgba(255, 255, 255, 1)"
     }
 })
 
 function open_door() {
     door_status = "open"
-    gsap.to(door, {
-        duration: 1,
-        rotateY: -120,
-        transformOrigin: "left center",
-        ease: "power2.inOut",
-        backgroundColor: "rgb(186, 185, 185)"
-    });
+    if (mode == "chophouse")
+        gsap.to(door, {
+            duration: 1,
+            rotateY: -120,
+            transformOrigin: "left center",
+            ease: "power2.inOut",
+            backgroundColor: "rgba(255, 255, 255, 1)"
+        });
+    else if (mode == "dim sum")
+        gsap.to(door, {
+            duration: 1,
+            rotateY: -120,
+            transformOrigin: "left center",
+            ease: "power2.inOut",
+            backgroundColor: "rgba(80, 41, 41, 1)"
+        });
 }
 
 function close_door() {
     door_status = "closed"
-    gsap.to(door, {
+    if (mode == "chophouse")
+        gsap.to(door, {
+            duration: 1,
+            rotateY: 0,
+            transformOrigin: "left center",
+            ease: "power2.inOut",
+            backgroundColor: "rgba(255, 255, 255, 1)"
+        });
+    else if (mode == "dim sum")
+        gsap.to(door, {
         duration: 1,
         rotateY: 0,
         transformOrigin: "left center",
         ease: "power2.inOut",
-        backgroundColor: "rgba(255, 255, 255, 1)"
+        backgroundColor: "rgba(80, 41, 41, 1)"
     });
 }
 
