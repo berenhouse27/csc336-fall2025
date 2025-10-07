@@ -1,0 +1,35 @@
+body {
+  font-family: sans-serif;
+  text-align: center;
+  margin-top: 40px;
+  background-color: #f9f9f9;
+}
+
+button {
+  padding: 10px 15px;
+  border-radius: 6px;
+  border: none;
+  background-color: #4caf50;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+img {
+  width: 80%;
+  max-width: 600px;
+  border-radius: 12px;
+  margin-top: 20px;
+}
+
+#output h2 {
+  margin-top: 20px;
+}
+
+#output p {
+  font-size: 1.2em;
+  margin-top: 8px;
+}
