@@ -59,27 +59,27 @@ const cities = [
   { name: "Reykjavik", lat: 64.1355, lon: -21.8954 }
 ];
 
-
-const pixabayKey = "52655335-429429a41cd5786c882871527";
-
 button.addEventListener("click", fetchCityData);
 
 async function fetchCityData() {
   const city = cities[Math.floor(Math.random() * cities.length)];
 
-  // Pixabay API
-  const imgRes = await fetch(
-    `https://pixabay.com/api/?key=${pixabayKey}&q=${encodeURIComponent(city.name)}&image_type=photo&per_page=3`
-  );
-  const imgData = await imgRes.json();
-  const imageUrl = imgData.hits.length > 0 ? imgData.hits[0].webformatURL : "";
+    // Wikepedia API
+    let imageUrl = "";
+    const wikiRes = await fetch(
+        `https://en.wikipedia.org/w/api.php?action=query&titles=${encodeURIComponent(city.name)}&prop=pageimages&format=json&pithumbsize=600&origin=*`
+    );
+    const wikiData = await wikiRes.json();
+    const pages = wikiData.query.pages;
+    const page = Object.values(pages)[0];
+    imageUrl = page && page.thumbnail ? page.thumbnail.source : "";
 
   // Open-Meteo API
   const weatherRes = await fetch(
     `https://api.open-meteo.com/v1/forecast?latitude=${city.lat}&longitude=${city.lon}&current_weather=true`
   );
   const weatherData = await weatherRes.json();
-  const weatherDesc = weatherData.current_weather ? `Temp: ${weatherData.current_weather.temperature} °C, Wind: ${weatherData.current_weather.windspeed} km/h` : "N/A";
+  const weatherDesc = weatherData.current_weather ? `Temp: ${weatherData.current_weather.temperature} \u00B0C, Wind: ${weatherData.current_weather.windspeed} km/h` : "N/A";
 
   document.getElementById("output").innerHTML = `
     <h2>${city.name}</h2>
