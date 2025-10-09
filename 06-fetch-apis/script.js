@@ -64,15 +64,15 @@ button.addEventListener("click", fetchCityData);
 async function fetchCityData() {
   const city = cities[Math.floor(Math.random() * cities.length)];
 
-    // Wikepedia API
-    let imageUrl = "";
-    const wikiRes = await fetch(
-        `https://en.wikipedia.org/w/api.php?action=query&titles=${encodeURIComponent(city.name)}&prop=pageimages&format=json&pithumbsize=600&origin=*`
-    );
-    const wikiData = await wikiRes.json();
-    const pages = wikiData.query.pages;
-    const page = Object.values(pages)[0];
-    imageUrl = page && page.thumbnail ? page.thumbnail.source : "";
+  // Wikepedia API
+  let imageUrl = "";
+  const wikiRes = await fetch(
+      `https://en.wikipedia.org/w/api.php?action=query&titles=${encodeURIComponent(city.name)}&prop=pageimages&format=json&pithumbsize=600&origin=*`
+  );
+  const wikiData = await wikiRes.json();
+  const pages = wikiData.query.pages;
+  const page = Object.values(pages)[0];
+  imageUrl = page && page.thumbnail ? page.thumbnail.source : "";
 
   // Open-Meteo API
   const weatherRes = await fetch(

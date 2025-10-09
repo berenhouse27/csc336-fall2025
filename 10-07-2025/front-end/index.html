@@ -1,0 +1,14 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <button id="testButton" onclick="testButtonClick()">Click</button>
+    </body>
+    <script>
+        function testButtonClick() {
+            let clickPromise = fetch("http://localhost:3000/test");
+            clickPromise.then((res) => {console.log(res)})
+        }
+    </script>
+</html>
