@@ -4,243 +4,285 @@
         {"name": "Immediate Family",
          "climate": "Arid",
          "towns": [
-            {"name": "Hill Family",
-             "population": 6,
-             "notable_people": [
-                {"name": "Hank Hill",
-                 "gender": "male",
-                 "role": "Assistant Manager of Strickland Propane",
-                 "items": [
-                    {
-                        "name": "Propane",
-                        "color": "Colorless",
-                        "odor": "Odorless"
-                    },
-                    {
-                        "name": "Propane Accessories",
-                        "types": [
-                            "Spatula",
-                            "Grill Brush",
-                            "Propane Regulator Hose",
-                            "Propane Tank Adapter"
-                    ]}
-                 ]},
-                {"name": "Peggy Hill",
-                 "gender": "female",
-                 "role": "Substitue Teacher",
-                 "items": [
-                    "1966 Subsitute Teacher of the Year Award",                                        
-                    "1967 Subsitute Teacher of the Year Award",                   
-                    "Paddle",                                      
-                    "Boggle Set"
-                 ]},
-                {"name": "Bobby Hill",
-                 "gender": "male",
-                 "role": "Prop Comic",
-                 "items": [
+            {
+                "name": "Hill Family",
+                "population": 6,
+                "notable_people": [
+                {
+                    "name": "Hank Hill",
+                    "gender": "male",
+                    "role": "Assistant Manager of Strickland Propane",
+                    "items": [
+                        {
+                            "name": "Propane",
+                            "color": "Colorless",
+                            "odor": "Odorless"
+                        },
+                        {
+                            "name": "Propane Accessories",
+                            "types": [
+                                "Spatula",
+                                "Grill Brush",
+                                "Propane Regulator Hose",
+                                "Propane Tank Adapter"
+                            ]
+                        }
+                    ]
+                },
+                {   
+                    "name": "Peggy Hill",
+                    "gender": "female",
+                    "role": "Substitue Teacher",
+                    "items": [
+                        "1966 Subsitute Teacher of the Year Award",                                        
+                        "1967 Subsitute Teacher of the Year Award",                   
+                        "Paddle",                                      
+                        "Boggle Set"
+                    ]
+                },
+                {   
+                    "name": "Bobby Hill",
+                    "gender": "male",
+                    "role": "Prop Comic",
+                    "items": [
                         "Fruit Pie",
                         "Fruit Pie",
                         "Prop set"  
-                ]},
-                {"name": "Tilly Mae Garrison",
-                 "gender": "female",
-                 "role": "Hank's mother",
-                 "items": [
-                    {
-                        "name": "Miniatures",
-                        "maker": "Lyle Neff"
-                    }
-                ]},
-                {"name": "Cotton Hill",
-                 "gender": "male",
-                 "role": "Army Veteran",
-                 "items": [
-                    {
-                        "name": "Missing Shins",
-                        "context": "Blown off by Japanese machine gun fire"
-                    }
-                ]},
-                {"name": "Didi Hill",
-                 "gender": "female",
-                 "role": "Cotton's Wife",
-                 "items": [
-                    {
-                        "name": "Breast Implants",
-                        "size": "large"
-                    }
-                ]}
-             ]},
-            {"name": "Platter Family",
-             "population": 3,
-             "notable_people": [
-                {"name": "Luanne Platter",
-                 "gender": "female",
-                 "role": "Beautician",
-                 "items": [
-                    "Buckley's Angel"
-                 ]},
-                {"name": "Leanne Platter",
-                 "gender": "female",
-                 "role": "Alcoholic",
-                 "items": [
-                    {
-                        "name": "Bottle of Jack",
-                        "color": "Caramel"
-                    },
-                    {
-                        "name": "Pack of Reds",
-                        "color": "White & Red"
-                    }
-                  ]},
-                {"name": "Hoyt Platter",
-                 "gender": "male",
-                 "role": "Oil-Rig Worker",
-                 "items": [
-                    "Fork in the Back"
-                 ]}
-            ]}
-         ]},
-        {"name": "Neighbors",
-         "climate": "Beautiful",
-         "towns": [
-            {"name": "Gribbles",
-             "population": 4,
-             "notable_people": [
-                {"name": "Dale Gribble",
-                 "gender": "male",
-                 "role": "Exterminator",
-                 "items": [
-                    {
-                        "name": "Bug-Gone Van",
-                        "color": "White"
-                    },
-                    {
-                        "name": "Guns",
-                        "count": "****"
-                    },
-                    {
-                        "name": "Conspiracy Theories",
-                        "count": "countless",
-                        "examples": [
-                            "The BEAST",
-                            "Aliens",
-                            "Time-Travel"
-                        ]
-                    }
-                 ]},
-                {"name": "Nancy Hickes-Gribble",
-                 "gender": "female",
-                 "role": "Newscaster",
-                 "items": [
-                    {
-                        "name": "Migraines",
-                        "treatment": "John Redcorn"
-                    }
-                ]},
-                {"name": "Joseph Gribble",
-                 "gender": "male",
-                 "role": "Child",
-                 "items": [
-                    {
-                        "name": "Ancestral Knife",
-                        "previous_owner": "John Redcorn"
-                    }
-                ]},
-                {"name": "John Redcorn",
-                 "gender": "male",
-                 "role": "Nancy's Spritual Healer",
-                 "items": [
-                    {
-                        "name": "Jeep",
-                        "color": "White"
-                    },
-                    "RV"
-                ]}
-            ]},
-            {"name": "Souphanousinphones",
-             "population": 3,
-             "notable_people": [
-                {"name": "Kahn Souphanousinphone",
-                 "gender": "male",
-                 "role": "Systems Manager",
-                 "items": [
-                    "Everything"
-                 ]},
-                {"name": "Minh Souphanousinphone",
-                 "gender": "female",
-                 "role": "Housewife",
-                 "items": [
-                    "Gun"
-                ]},
-                {"name": "Kahn 'Connie' Souphanousinphone Jr.",
-                 "gender": "female",
-                 "role": "Son",
-                 "items": [
-                    "Violin"
-                ]}
-             ]},
-            {"name": "Other Neighbors",
-             "population": 2,
-             "notable_people": [
-                {"name": "Jeff Boomhauer",
-                 "gender": "male",
-                 "role": "Texas Ranger",
-                 "items": [
-                    {
-                        "name": "Slick ass whip",
-                        "color": "Red"
-                    },
-                    {
-                        "name": "Video Recorder",
-                        "color": "Black"
-                    }
-                 ]},
-                {"name": "Bill Dauterive",
-                 "gender": "male",
-                 "role": "Army Barber",
-                 "items": [
-                    {
-                        "name": "Shirt",
-                        "Status": "Covered with stains"
-                    },
-                    {
-                        "name": "Shoes",
-                        "status": "disheveled"
-                    },
-                    {
-                        "name": "Pants",
-                        "Status": "On"
-                    }
-                ]}
-            ]}
-        ]},
-        {"name": "Other",
-         "climate": "Cold",
-         "towns": [
-            {"name": "Side Characters",
-             "population": 3,
-             "notable_people": [
-                {"name": "Chuck Mangione",
-                 "gender": "male",
-                 "role": "Advertiser, Musician",
-                 "items": [
-                    "Trumpet",
-                    "Mega-Lo-Mart ad deal" 
-                 ]},
-                {"name": "Buckley",
-                 "gender": "male",
-                 "role": "Angel",
-                 "items": [
-                    "Leaky Propane Tank"
-                ]},
-                {"name": "Buck Strickland",
-                 "gender": "male",
-                 "role": "Owner and Manager of Strickland Propane",
-                 "items": [
-                    "Strickland Propane",
-                    "Gambling addiciton"
-                ]}
-            ]}
-         ]}
+                    ]
+                },
+                {   
+                    "name": "Tilly Mae Garrison",
+                    "gender": "female",
+                    "role": "Hank's mother",
+                    "items": [
+                        {
+                            "name": "Miniatures",
+                            "maker": "Lyle Neff"
+                        }
+                    ]
+                },
+                {
+                    "name": "Cotton Hill",
+                    "gender": "male",
+                    "role": "Army Veteran",
+                    "items": [
+                        {
+                            "name": "Missing Shins",
+                            "context": "Blown off by Japanese machine gun fire"
+                        }
+                    ]
+                },
+                {
+                    "name": "Didi Hill",                 
+                    "gender": "female",                 
+                    "role": "Cotton's Wife",            
+                    "items": [
+                        {
+                            "name": "Breast Implants",
+                            "size": "large"
+                        }
+                    ]
+                }
+                ]
+            },
+            {
+                "name": "Platter Family",
+                "population": 3,
+                "notable_people": [
+                        {
+                            "name": "Luanne Platter",
+                            "gender": "female",
+                            "role": "Beautician",
+                            "items": ["Buckley's Angel"]
+                        },
+                        {
+                            "name": "Leanne Platter",
+                            "gender": "female",
+                            "role": "Alcoholic",
+                            "items": [
+                                {
+                                    "name": "Bottle of Jack",
+                                    "color": "Caramel"
+                                },
+                                {
+                                    "name": "Pack of Reds",
+                                    "color": "White & Red"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Hoyt Platter",
+                            "gender": "male",
+                            "role": "Oil-Rig Worker",
+                            "items": ["Fork in the Back"]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Neighbors",
+            "climate": "Beautiful",
+            "towns": [
+                {
+                    "name": "Gribbles",
+                    "population": 4,
+                    "notable_people": [
+                        {
+                            "name": "Dale Gribble",
+                            "gender": "male",
+                            "role": "Exterminator",
+                            "items": [
+                                {
+                                    "name": "Bug-Gone Van",
+                                    "color": "White"
+                                },
+                                {
+                                    "name": "Guns",
+                                    "count": "****"
+                                },
+                                {
+                                    "name": "Conspiracy Theories",
+                                    "count": "countless",
+                                    "examples": [
+                                    "The BEAST",
+                                    "Aliens",
+                                    "Time-Travel"
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Nancy Hickes-Gribble",
+                            "gender": "female",
+                            "role": "Newscaster",
+                            "items": [
+                                {
+                                    "name": "Migraines",
+                                    "treatment": "John Redcorn"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Joseph Gribble",
+                            "gender": "male",
+                            "role": "Child",
+                            "items": [
+                                {
+                                    "name": "Ancestral Knife",
+                                    "previous_owner": "John Redcorn"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "John Redcorn",
+                            "gender": "male",
+                            "role": "Nancy's Spritual Healer",
+                            "items": [
+                                {
+                                    "name": "Jeep",
+                                    "color": "White"
+                                },
+                                "RV"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Souphanousinphones",
+                    "population": 3,
+                    "notable_people": [
+                        {
+                            "name": "Kahn Souphanousinphone",
+                            "gender": "male",
+                            "role": "Systems Manager",
+                            "items": ["Everything"]
+                        },
+                        {
+                            "name": "Minh Souphanousinphone",
+                            "gender": "female",
+                            "role": "Housewife",
+                            "items": ["Gun"]
+                        },
+                        {   
+                            "name": "Kahn 'Connie' Souphanousinphone Jr.",
+                            "gender": "female",
+                            "role": "Son",
+                            "items": ["Violin"]
+                        }
+                    ]
+                },
+                {
+                    "name": "Other Neighbors",
+                    "population": 2,
+                    "notable_people": [
+                        {
+                            "name": "Jeff Boomhauer",
+                            "gender": "male",
+                            "role": "Texas Ranger",
+                            "items": [
+                                {
+                                    "name": "Slick ass whip",
+                                    "color": "Red"
+                                },
+                                {
+                                    "name": "Video Recorder",
+                                    "color": "Black"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Bill Dauterive",
+                            "gender": "male",
+                            "role": "Army Barber",
+                            "items": [
+                                {
+                                    "name": "Shirt",
+                                    "Status": "Covered with stains"
+                                },
+                                {
+                                    "name": "Shoes",
+                                    "status": "disheveled"
+                                },
+                                {
+                                    "name": "Pants",
+                                    "Status": "On"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Other",
+            "climate": "Cold",
+            "towns": [
+                {
+                    "name": "Side Characters",
+                    "population": 3,
+                    "notable_people": [
+                        {
+                            "name": "Chuck Mangione",
+                            "gender": "male",
+                            "role": "Advertiser, Musician",
+                            "items": ["Trumpet", "Mega-Lo-Mart ad deal" ]
+                        },
+                        {
+                            "name": "Buckley",
+                            "gender": "male",
+                            "role": "Angel",
+                            "items": ["Leaky Propane Tank"]
+                        },
+                        {
+                            "name": "Buck Strickland",
+                            "gender": "male",
+                            "role": "Owner and Manager of Strickland Propane",
+                            "items": ["Strickland Propane", "Gambling addiciton"]
+                        }
+                    ]
+                }
+            ]
+        }
     ]
 }
