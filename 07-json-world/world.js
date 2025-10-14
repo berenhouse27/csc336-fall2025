@@ -3,11 +3,12 @@ import * as fs from 'fs';
 const data = fs.readFileSync('./world.json', 'utf-8');
 const world = JSON.parse(data);
 
+// Men of Arlen
 console.log("Men of Arlen:");
 world.regions.forEach(region => {
   region.towns.forEach(town => {
     console.log(town.name + ':')
-    town["notable people"].forEach(person => {
+    town.notable_people.forEach(person => {
         if (person.gender == 'male') {
             console.log(`   ${person.name} (${person.role})`)
             person.items.forEach( item => {
@@ -26,12 +27,15 @@ world.regions.forEach(region => {
         })
     })
 })
+
 console.log('')
+
+// Women of Arlen
 console.log("Women of Arlen:");
 world.regions.forEach(region => {
   region.towns.forEach(town => {
     console.log(town.name + ':')
-    town["notable people"].forEach(person => {
+    town.notable_people.forEach(person => {
         if (person.gender == 'female') {
             console.log(`   ${person.name} (${person.role})`)
             person.items.forEach( item => {

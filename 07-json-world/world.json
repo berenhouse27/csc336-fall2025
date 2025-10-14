@@ -6,7 +6,7 @@
          "towns": [
             {"name": "Hill Family",
              "population": 6,
-             "notable people": [
+             "notable_people": [
                 {"name": "Hank Hill",
                  "gender": "male",
                  "role": "Assistant Manager of Strickland Propane",
@@ -72,7 +72,7 @@
              ]},
             {"name": "Platter Family",
              "population": 3,
-             "notable people": [
+             "notable_people": [
                 {"name": "Luanne Platter",
                  "gender": "female",
                  "role": "Beautician",
@@ -105,7 +105,7 @@
          "towns": [
             {"name": "Gribbles",
              "population": 4,
-             "notable people": [
+             "notable_people": [
                 {"name": "Dale Gribble",
                  "gender": "male",
                  "role": "Exterminator",
@@ -116,7 +116,16 @@
                     },
                     {
                         "name": "Guns",
-                        "count": "many"
+                        "count": "****"
+                    },
+                    {
+                        "name": "Conspiracy Theories",
+                        "count": "countless",
+                        "examples": [
+                            "The BEAST",
+                            "Aliens",
+                            "Time-Travel"
+                        ]
                     }
                  ]},
                 {"name": "Nancy Hickes-Gribble",
@@ -132,24 +141,25 @@
                  "gender": "male",
                  "role": "Child",
                  "items": [
-                    "Ancestral Knife"
+                    {
+                        "name": "Ancestral Knife",
+                        "previous_owner": "John Redcorn"
+                    }
                 ]},
                 {"name": "John Redcorn",
                  "gender": "male",
-                 "role": "Spritual Healer",
+                 "role": "Nancy's Spritual Healer",
                  "items": [
                     {
                         "name": "Jeep",
                         "color": "White"
                     },
-                    {
-                        "name": "RV"
-                    }
+                    "RV"
                 ]}
             ]},
             {"name": "Souphanousinphones",
              "population": 3,
-             "notable people": [
+             "notable_people": [
                 {"name": "Kahn Souphanousinphone",
                  "gender": "male",
                  "role": "Systems Manager",
@@ -162,7 +172,7 @@
                  "items": [
                     "Gun"
                 ]},
-                {"name": "Kahn Jr. 'Connie' Souphanousinphone",
+                {"name": "Kahn 'Connie' Souphanousinphone Jr.",
                  "gender": "female",
                  "role": "Son",
                  "items": [
@@ -171,7 +181,7 @@
              ]},
             {"name": "Other Neighbors",
              "population": 2,
-             "notable people": [
+             "notable_people": [
                 {"name": "Jeff Boomhauer",
                  "gender": "male",
                  "role": "Texas Ranger",
@@ -209,7 +219,7 @@
          "towns": [
             {"name": "Side Characters",
              "population": 3,
-             "notable people": [
+             "notable_people": [
                 {"name": "Chuck Mangione",
                  "gender": "male",
                  "role": "Advertiser, Musician",
