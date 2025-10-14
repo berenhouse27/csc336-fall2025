@@ -45,11 +45,7 @@
                         "name": "Bobby Hill",
                         "gender": "male",
                         "role": "Prop Comic",
-                        "items": [
-                            "Fruit Pie",
-                            "Fruit Pie",
-                            "Prop set"  
-                        ]
+                        "items": ["Fruit Pie", "Fruit Pie", "Prop set"]
                     },
                     {   
                         "name": "Tilly Mae Garrison",
@@ -171,7 +167,7 @@
                             "items": [
                                 {
                                     "name": "Ancestral Knife",
-                                    "previous_owner": "John Redcorn"
+                                    "previousOwner": "John Redcorn"
                                 }
                             ]
                         },
@@ -239,15 +235,15 @@
                             "items": [
                                 {
                                     "name": "Shirt",
-                                    "Status": "Covered with stains"
+                                    "status": "Covered with stains"
                                 },
                                 {
                                     "name": "Shoes",
-                                    "status": "disheveled"
+                                    "status": "Disheveled"
                                 },
                                 {
                                     "name": "Pants",
-                                    "Status": "On"
+                                    "status": "On"
                                 }
                             ]
                         }
