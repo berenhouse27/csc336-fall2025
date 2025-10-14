@@ -1,13 +1,14 @@
 
 {
     "regions": [ 
-        {"name": "Arlen",
+        {"name": "Immediate Family",
          "climate": "Arid",
          "towns": [
-            {"name": "Hill Residence",
+            {"name": "Hill Family",
              "population": 6,
              "notable people": [
                 {"name": "Hank Hill",
+                 "gender": "male",
                  "role": "Assistant Manager of Strickland Propane",
                  "items": [
                     {
@@ -25,6 +26,7 @@
                     ]}
                  ]},
                 {"name": "Peggy Hill",
+                 "gender": "female",
                  "role": "Substitue Teacher",
                  "items": [
                     "1966 Subsitute Teacher of the Year Award",                                        
@@ -33,6 +35,7 @@
                     "Boggle Set"
                  ]},
                 {"name": "Bobby Hill",
+                 "gender": "male",
                  "role": "Prop Comic",
                  "items": [
                         "Fruit Pie",
@@ -40,14 +43,16 @@
                         "Prop set"  
                 ]},
                 {"name": "Tilly Mae Garrison",
+                 "gender": "female",
                  "role": "Hank's mother",
                  "items": [
                     {
-                        "name": "miniatures",
+                        "name": "Miniatures",
                         "maker": "Lyle Neff"
                     }
                 ]},
                 {"name": "Cotton Hill",
+                 "gender": "male",
                  "role": "Army Veteran",
                  "items": [
                     {
@@ -56,6 +61,7 @@
                     }
                 ]},
                 {"name": "Didi Hill",
+                 "gender": "female",
                  "role": "Cotton's Wife",
                  "items": [
                     {
@@ -68,12 +74,13 @@
              "population": 3,
              "notable people": [
                 {"name": "Luanne Platter",
-                 "role": "Hairstyling",
+                 "gender": "female",
+                 "role": "Beautician",
                  "items": [
-                    "Hairdryer",
                     "Buckley's Angel"
                  ]},
                 {"name": "Leanne Platter",
+                 "gender": "female",
                  "role": "Alcoholic",
                  "items": [
                     {
@@ -86,20 +93,21 @@
                     }
                   ]},
                 {"name": "Hoyt Platter",
+                 "gender": "male",
                  "role": "Oil-Rig Worker",
                  "items": [
                     "Fork in the Back"
                  ]}
             ]}
          ]},
-
-        {"name": "Wichita Falls",
+        {"name": "Neighbors",
          "climate": "Beautiful",
          "towns": [
             {"name": "Gribbles",
              "population": 4,
              "notable people": [
                 {"name": "Dale Gribble",
+                 "gender": "male",
                  "role": "Exterminator",
                  "items": [
                     {
@@ -112,6 +120,7 @@
                     }
                  ]},
                 {"name": "Nancy Hickes-Gribble",
+                 "gender": "female",
                  "role": "Newscaster",
                  "items": [
                     {
@@ -120,11 +129,13 @@
                     }
                 ]},
                 {"name": "Joseph Gribble",
+                 "gender": "male",
                  "role": "Child",
                  "items": [
                     "Ancestral Knife"
                 ]},
                 {"name": "John Redcorn",
+                 "gender": "male",
                  "role": "Spritual Healer",
                  "items": [
                     {
@@ -132,7 +143,7 @@
                         "color": "White"
                     },
                     {
-                        "name": "Trailer"
+                        "name": "RV"
                     }
                 ]}
             ]},
@@ -140,17 +151,20 @@
              "population": 3,
              "notable people": [
                 {"name": "Kahn Souphanousinphone",
+                 "gender": "male",
                  "role": "Systems Manager",
                  "items": [
                     "Everything"
                  ]},
                 {"name": "Minh Souphanousinphone",
+                 "gender": "female",
                  "role": "Housewife",
                  "items": [
                     "Gun"
                 ]},
                 {"name": "Kahn Jr. 'Connie' Souphanousinphone",
-                 "role": "Son (daughter)",
+                 "gender": "female",
+                 "role": "Son",
                  "items": [
                     "Violin"
                 ]}
@@ -159,6 +173,7 @@
              "population": 2,
              "notable people": [
                 {"name": "Jeff Boomhauer",
+                 "gender": "male",
                  "role": "Texas Ranger",
                  "items": [
                     {
@@ -171,11 +186,12 @@
                     }
                  ]},
                 {"name": "Bill Dauterive",
-                 "role": "Deadbeat",
+                 "gender": "male",
+                 "role": "Army Barber",
                  "items": [
                     {
                         "name": "Shirt",
-                        "Status": "White with stains"
+                        "Status": "Covered with stains"
                     },
                     {
                         "name": "Shoes",
@@ -186,22 +202,29 @@
                         "Status": "On"
                     }
                 ]}
-            ]},
+            ]}
+        ]},
+        {"name": "Other",
+         "climate": "Cold",
+         "towns": [
             {"name": "Side Characters",
              "population": 3,
              "notable people": [
                 {"name": "Chuck Mangione",
+                 "gender": "male",
                  "role": "Advertiser, Musician",
                  "items": [
                     "Trumpet",
                     "Mega-Lo-Mart ad deal" 
                  ]},
                 {"name": "Buckley",
+                 "gender": "male",
                  "role": "Angel",
                  "items": [
                     "Leaky Propane Tank"
                 ]},
                 {"name": "Buck Strickland",
+                 "gender": "male",
                  "role": "Owner and Manager of Strickland Propane",
                  "items": [
                     "Strickland Propane",
