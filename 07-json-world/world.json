@@ -1,0 +1,214 @@
+
+{
+    "regions": [ 
+        {"name": "Arlen",
+         "climate": "Arid",
+         "towns": [
+            {"name": "Hill Residence",
+             "population": 6,
+             "notable people": [
+                {"name": "Hank Hill",
+                 "role": "Assistant Manager of Strickland Propane",
+                 "items": [
+                    {
+                        "name": "Propane",
+                        "color": "Colorless",
+                        "odor": "Odorless"
+                    },
+                    {
+                        "name": "Propane Accessories",
+                        "types": [
+                            "Spatula",
+                            "Grill Brush",
+                            "Propane Regulator Hose",
+                            "Propane Tank Adapter"
+                        ]
+                    }
+                 ]},
+                {"name": "Peggy Hill",
+                 "role": "Substitue Teacher",
+                 "items": [
+                    "1966 Subsitute Teacher of the Year Award",                                        
+                    "1967 Subsitute Teacher of the Year Award",                   
+                    "Paddle",                                      
+                    "Boggle Set"
+                 ]},
+                {"name": "Bobby Hill",
+                 "role": "Prop Comic",
+                 "items": [
+                        "Fruit Pie",
+                        "Fruit Pie",
+                        "Prop set"  
+                ]},
+                {"name": "Tilly Mae Garrison",
+                 "role": "Hank's mother",
+                 "items": [
+                    {
+                        "name": "miniatures",
+                        "maker": "Lyle Neff"
+                    }
+                ]},
+                {"name": "Cotton Hill",
+                 "role": "Army Veteran",
+                 "items": [
+                    {
+                        "name": "Missing Shins",
+                        "context": "Blown off by Japanese machine gun fire"
+                    }
+                ]},
+                {"name": "Didi Hill",
+                 "role": "Cotton's Wife",
+                 "items": [
+                    {
+                        "name": "Breast Implants",
+                        "size": "large"
+                    }
+                ]}
+             ]},
+            {"name": "Platter Family",
+             "population": 3,
+             "notable people": [
+                {"name": "Luanne Platter",
+                 "role": "Hairstyling",
+                 "items": [
+                    "Hairdryer",
+                    "Buckley's Angel"
+                 ]},
+                {"name": "Leanne Platter",
+                 "role": "Alcoholic",
+                 "items": [
+                    {
+                        "name": "Bottle of Jack",
+                        "color": "Caramel"
+                    },
+                    {
+                        "name": "Pack of Reds",
+                        "color": "White & Red"
+                    }
+                  ]},
+                {"name": "Hoyt Platter",
+                 "role": "Oil-Rig Worker",
+                 "items": [
+                    "Fork in the Back"
+                 ]}
+            ]}
+         ]},
+
+        {"name": "Wichita Falls",
+         "climate": "Beautiful",
+         "towns": [
+            {"name": "Gribbles",
+             "population": 4,
+             "notable people": [
+                {"name": "Dale Gribble",
+                 "role": "Exterminator",
+                 "items": [
+                    {
+                        "name": "Bug-Gone Van",
+                        "color": "White"
+                    },
+                    {
+                        "name": "Guns",
+                        "count": "many"
+                    }
+                 ]},
+                {"name": "Nancy Hickes-Gribble",
+                 "role": "Newscaster",
+                 "items": [
+                    {
+                        "name": "Migraines",
+                        "treatment": "John Redcorn"
+                    }
+                ]},
+                {"name": "Joseph Gribble",
+                 "role": "Child",
+                 "items": [
+                    "Ancestral Knife"
+                ]},
+                {"name": "John Redcorn",
+                 "role": "Spritual Healer",
+                 "items": [
+                    {
+                        "name": "Jeep",
+                        "color": "White"
+                    },
+                    {
+                        "name": "Trailer"
+                    }
+                ]}
+            ]},
+            {"name": "Souphanousinphones",
+             "population": 3,
+             "notable people": [
+                {"name": "Kahn Souphanousinphone",
+                 "role": "Systems Manager",
+                 "items": [
+                    "Everything"
+                 ]},
+                {"name": "Minh Souphanousinphone",
+                 "role": "Housewife",
+                 "items": [
+                    "Gun"
+                ]},
+                {"name": "Kahn Jr. 'Connie' Souphanousinphone",
+                 "role": "Son (daughter)",
+                 "items": [
+                    "Violin"
+                ]}
+             ]},
+            {"name": "Other Neighbors",
+             "population": 2,
+             "notable people": [
+                {"name": "Jeff Boomhauer",
+                 "role": "Texas Ranger",
+                 "items": [
+                    {
+                        "name": "Slick ass whip",
+                        "color": "Red"
+                    },
+                    {
+                        "name": "Video Recorder",
+                        "color": "Black"
+                    }
+                 ]},
+                {"name": "Bill Dauterive",
+                 "role": "Deadbeat",
+                 "items": [
+                    {
+                        "name": "Shirt",
+                        "Status": "White with stains"
+                    },
+                    {
+                        "name": "Shoes",
+                        "status": "disheveled"
+                    },
+                    {
+                        "name": "Pants",
+                        "Status": "On"
+                    }
+                ]}
+            ]},
+            {"name": "Side Characters",
+             "population": 3,
+             "notable people": [
+                {"name": "Chuck Mangione",
+                 "role": "Advertiser, Musician",
+                 "items": [
+                    "Trumpet",
+                    "Mega-Lo-Mart ad deal" 
+                 ]},
+                {"name": "Buckley",
+                 "role": "Angel",
+                 "items": [
+                    "Leaky Propane Tank"
+                ]},
+                {"name": "Buck Strickland",
+                 "role": "Owner and Manager of Strickland Propane",
+                 "items": [
+                    "Strickland Propane",
+                    "Gambling addiciton"
+                ]}
+            ]}
+         ]}
+    ]
+}
