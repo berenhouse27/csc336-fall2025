@@ -1,0 +1,38 @@
+<html>
+    <head></head>
+    <body>
+        <p>Hello, User</p>
+        <form id="form">
+            <label for="name">Name:</label>
+            <input type="text" name="name" id="name"><br>
+            <label for="animal">Animal:</label>
+            <input type="text" name="animal" id="animal"><br>
+            <label for="food">Food:</label>
+            <input type="text" name="food" id="food">
+            <button type="submit">SUBMIT</button>
+        </form>
+        <script>
+            const form = document.getElementById("form");
+            form.addEventListener("submit", async e => {
+                e.preventDefault();
+                
+                let formData = new FormData(form);
+                // let entries = formData.entries();
+                // let data = {};
+                // for (let entry of entries) {
+                //     data[entry[0]] = entry[1];
+                // }
+                let data = Object.fromEntries(formData.entries());
+                console.log(data);
+
+                let response = await fetch("/api/add", {
+                    method: "POST",
+                    headers: {"Content-Type": "application/json"},
+                    body: JSON.stringify(data)
+                });
+                let responseJSON = await response.json();
+                console.log(responseJSON.name);
+            });
+        </script>
+    </body>
+</html>
