@@ -1,0 +1,36 @@
+
+<html>
+    <head>
+        <script src="script.js" defer></script>
+        <title>King of the Hill</title>
+    </head>
+    <body>
+        <h1>King of the Hill</h1>
+
+        <div id="world-container"></div>
+
+        <h2>Add a Person</h2>
+        <form id="person-form">
+            <label for="name">Name:</label><br>
+                <input type="text" name="name" placeholder="Enter person name" required><br><br>
+
+            <label for="gender">Gender:</label><br>
+                <input type="radio" name="gender" value="male" required>Male</input><br>
+                <input type="radio" name="gender" value="female">Female</input><br><br>
+
+            <label for="role">Role:</label><br>
+                <input type="text" name="role" placeholder="Enter role" required><br><br>
+
+            <label for="town-select">Town:</label><br>
+                <select id="town-select" name="town" required></select><br><br>
+
+            <label for="items">Items:</label><br>
+                <div id="items">
+                    <input type="text" name="items" placeholder="Enter Item">
+                </div>
+            <button id="add-item">Add Item</button><br><br>
+
+            <button type="submit">Submit</button>
+        </form>
+    </body>
+</html>
