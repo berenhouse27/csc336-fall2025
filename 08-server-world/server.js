@@ -7,6 +7,8 @@ app.use(express.static("./public"));
 
 app.use(express.json());
 
+console.log("Starting server...");
+
 // GET
 app.get("/world", async (req, res) => {
     const dataString = await fs.readFileSync("world.json", "utf-8");
