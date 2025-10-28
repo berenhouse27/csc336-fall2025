@@ -11,7 +11,7 @@ console.log("Starting server...");
 
 // GET
 app.get("/world", async (req, res) => {
-    const dataString = await fs.readFileSync("world.json", "utf-8");
+    const dataString = await fs.readFileSync("./world.json", "utf-8");
     const dataObject = JSON.parse(dataString);
     res.json(dataObject);
 });
@@ -20,7 +20,7 @@ app.get("/world", async (req, res) => {
 app.post("/update", async (req, res) => {
     const { regionName, townName, newPerson } = req.body;
 
-    const worldData = fs.readFileSync("world.json", "utf-8");
+    const worldData = fs.readFileSync("./world.json", "utf-8");
     const world = JSON.parse(worldData);
 
     const region = world.regions.find(r => r.name === regionName);
@@ -33,7 +33,7 @@ app.post("/update", async (req, res) => {
 
     town.population = (town.population || 0) + 1;
 
-    fs.writeFileSync("world.json", JSON.stringify(world, null, 2));
+    fs.writeFileSync("./world.json", JSON.stringify(world, null, 2));
     res.json(world);
 });
 
