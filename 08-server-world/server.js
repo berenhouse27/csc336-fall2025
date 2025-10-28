@@ -1,11 +1,12 @@
 import express from "express";
 import fs from "fs";
+import cors from "cors";
 
 const app = express();
 
 app.use(express.static("./public"));
-
 app.use(express.json());
+app.use(cors())
 
 console.log("Starting server...");
 
