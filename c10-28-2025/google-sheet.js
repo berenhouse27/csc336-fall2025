@@ -1,5 +1,4 @@
 
-import { parse } from "csv-parse/parse";
 
 const sheet_id = "11XhA5zlgcSNtbhrCKjInq330YgjbAxXrl41rbtzc8Yw"
 const sheet_url = `https://docs.google.com/spreadsheets/d/${sheet_id}/export?format=csv`
