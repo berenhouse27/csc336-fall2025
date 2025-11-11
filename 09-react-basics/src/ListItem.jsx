@@ -1,14 +1,14 @@
 import Stars from "./Stars.jsx";
 import "./ListItem.css";
 
-function MovieItem({ title, rating }) {
+function ListItem({ title, rating }) {
   return (
-    <li className="movie-item">
-      <span className="movie-title">{title}</span>
+    <li className="list-item">
+      <span className="item-title">{title}</span>
       <Stars rating={rating} />
       <span className="rating-count">{rating} / 5 stars</span>
     </li>
   );
 }
 
-export default MovieItem;
+export default ListItem;

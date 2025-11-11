@@ -28,12 +28,12 @@ function App() {
   const [showInput, setShowInput] = useState("");
   const [showRating, setShowRating] = useState(1); 
 
-function addShow() {
-  if (showInput.trim() === "") return;
-  setShows([...shows, { title: showInput, rating: showRating }]);
-  setShowInput("");
-  setShowRating(1);
-}
+  function addShow() {
+    if (showInput.trim() === "") return;
+    setShows([...shows, { title: showInput, rating: showRating }]);
+    setShowInput("");
+    setShowRating(1);
+  }
 
   function addMovie() {
     if (inputValue.trim() === "") return;
