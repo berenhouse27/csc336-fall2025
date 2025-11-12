@@ -51,7 +51,7 @@ function App() {
           type="text"
           placeholder="Movie title..."
           value={inputValue}
-          onChange={(e) => setInputValue(e.target.value)}
+          onChange={ (e) => setInputValue(e.target.value) }
         />
         <select
           value={inputRating}
