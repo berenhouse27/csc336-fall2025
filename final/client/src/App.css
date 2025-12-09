@@ -26,7 +26,6 @@ body {
     padding-top: 0;
 }
 
-/* Navigation Styles */
 .main-navigation {
     background: white;
     border-bottom: 2px solid #4299e1;
@@ -263,7 +262,6 @@ body {
     background: #3182ce;
 }
 
-/* List Component Styles */
 .list-container {
     max-width: 1200px;
     margin: 0 auto;
@@ -365,7 +363,6 @@ body {
     transition: border-color 0.2s;
 }
 
-/* Style filter dropdown options */
 .filter-select option {
     background: white;
     color: #2d3748;
@@ -616,7 +613,6 @@ body {
     color: #718096;
 }
 
-/* Form Component Styles */
 .form-container {
     max-width: 700px;
     margin: 0 auto;
@@ -729,13 +725,11 @@ body {
     color: #2d3748;
 }
 
-/* Style placeholders */
 .form-input::placeholder,
 .form-textarea::placeholder {
     color: #a0aec0;
 }
 
-/* Style dropdown options */
 .form-select option {
     background: white;
     color: #2d3748;
@@ -877,7 +871,6 @@ body {
     color: #2d3748;
 }
 
-/* Responsive design */
 @media (max-width: 768px) {
     .nav-container {
         flex-direction: column;
