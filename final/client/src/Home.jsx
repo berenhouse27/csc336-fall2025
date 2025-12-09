@@ -18,7 +18,7 @@ function Home({ books }) {
         ? (booksWithRatings.reduce((sum, book) => sum + book.rating, 0) / booksWithRatings.length).toFixed(1)
         : 'N/A'
 
-    // Get top genres (sorted by count)
+    // Get top genres 
     const topGenres = Object.entries(booksByGenre)
         .sort((a, b) => b[1] - a[1])
         .slice(0, 5)
