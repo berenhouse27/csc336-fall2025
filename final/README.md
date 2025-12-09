@@ -1,6 +1,6 @@
 Book Library Manager
 
-URL: [Your Render URL will go here]
+URL: 
 
 This app allows you to:
 - View all books in your library
