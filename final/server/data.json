@@ -1,0 +1,37 @@
+[
+  {
+    "title": "Siddartha: an Indian Poem",
+    "author": "Hermann Hesse",
+    "genre": "Fiction",
+    "isbn": "978-0-14-243718-6",
+    "rating": 5,
+    "notes": "The journey of a man trying to obtain enlightenment",
+    "id": 1
+  },
+  {
+    "title": "Demian",
+    "author": "Hermann Hesse",
+    "genre": "Fiction",
+    "isbn": "978-0-14-310678-4",
+    "rating": 5,
+    "notes": "A coming-of-age story about a German boy experiencing the world leading up to WWII",
+    "id": 2
+  },
+  {
+    "id": 3,
+    "title": "Journey to the East",
+    "author": "Hermann Hesse",
+    "genre": "Fiction",
+    "rating": 5,
+    "isbn": "978-0-31-242168-7"
+  },
+  {
+    "title": "Poets Square: A memoir in thirty cats",
+    "author": "Courtney Gustafson",
+    "genre": "Biography",
+    "isbn": "978-0-593-72761-4",
+    "rating": 5,
+    "notes": "A personal memoir about Courtney Gustafson's experience caring for a colony of feral cats",
+    "id": 4
+  }
+]
