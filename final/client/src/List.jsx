@@ -21,7 +21,7 @@ function List({ books, updateBook, deleteBook }) {
             // Filter by genre
             const genreMatch = selectedGenre === 'all' || book.genre === selectedGenre
 
-            // Filter by search query (title or author)
+            // Filter by search query 
             const searchLower = searchQuery.toLowerCase()
             const titleMatch = book.title?.toLowerCase().includes(searchLower)
             const authorMatch = book.author?.toLowerCase().includes(searchLower)
@@ -67,7 +67,7 @@ function List({ books, updateBook, deleteBook }) {
         return date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })
     }
 
-    // Render star rating
+    // Star rating
     const renderStars = (rating) => {
         if (!rating) return <span className="no-rating">No rating</span>
         return (
