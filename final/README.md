@@ -11,6 +11,6 @@ This app allows you to:
 - View statistics about your collection
 
 External Libraries Used
-react-icons: For UI icons (Font Awesome icons)
+- react-icons: For UI icons 
 
 
