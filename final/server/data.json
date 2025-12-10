@@ -6,6 +6,7 @@
     "isbn": "978-0-14-243718-6",
     "rating": 5,
     "notes": "The journey of a man trying to obtain enlightenment",
+    "isRead": true,
     "id": 1
   },
   {
@@ -15,6 +16,7 @@
     "isbn": "978-0-14-310678-4",
     "rating": 5,
     "notes": "A coming-of-age story about a German boy experiencing the world leading up to WWII",
+    "isRead": true,
     "id": 2
   },
   {

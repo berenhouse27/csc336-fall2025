@@ -1,11 +1,12 @@
 import { useState, useMemo } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { FaStar, FaSearch, FaFilter, FaChevronDown, FaChevronUp, FaBook, FaEdit, FaTrash } from 'react-icons/fa'
+import { FaStar, FaSearch, FaFilter, FaChevronDown, FaChevronUp, FaBook, FaEdit, FaTrash, FaCheckCircle } from 'react-icons/fa'
 
 function List({ books, updateBook, deleteBook }) {
     const navigate = useNavigate()
     const [searchQuery, setSearchQuery] = useState('')
     const [selectedGenre, setSelectedGenre] = useState('all')
+    const [readFilter, setReadFilter] = useState('all')
     const [sortBy, setSortBy] = useState('title')
     const [expandedBooks, setExpandedBooks] = useState(new Set())
 
@@ -21,13 +22,18 @@ function List({ books, updateBook, deleteBook }) {
             // Filter by genre
             const genreMatch = selectedGenre === 'all' || book.genre === selectedGenre
 
+            // Filter by read status
+            const readMatch = readFilter === 'all' || 
+                (readFilter === 'read' && book.isRead === true) ||
+                (readFilter === 'unread' && (book.isRead === false || book.isRead === undefined))
+
             // Filter by search query 
             const searchLower = searchQuery.toLowerCase()
             const titleMatch = book.title?.toLowerCase().includes(searchLower)
             const authorMatch = book.author?.toLowerCase().includes(searchLower)
             const searchMatch = !searchQuery || titleMatch || authorMatch
 
-            return genreMatch && searchMatch
+            return genreMatch && readMatch && searchMatch
         })
 
         // Sort books
@@ -47,7 +53,7 @@ function List({ books, updateBook, deleteBook }) {
         })
 
         return filtered
-    }, [books, searchQuery, selectedGenre, sortBy])
+    }, [books, searchQuery, selectedGenre, readFilter, sortBy])
 
     // Toggle book expansion
     const toggleExpand = (bookId) => {
@@ -135,6 +141,20 @@ function List({ books, updateBook, deleteBook }) {
                     </div>
 
                     <div className="filter-group">
+                        <label htmlFor="read-filter">Read Status:</label>
+                        <select
+                            id="read-filter"
+                            value={readFilter}
+                            onChange={(e) => setReadFilter(e.target.value)}
+                            className="filter-select"
+                        >
+                            <option value="all">All Books</option>
+                            <option value="read">Read</option>
+                            <option value="unread">Unread</option>
+                        </select>
+                    </div>
+
+                    <div className="filter-group">
                         <label htmlFor="sort-filter">Sort by:</label>
                         <select
                             id="sort-filter"
@@ -182,6 +202,21 @@ function List({ books, updateBook, deleteBook }) {
 
                                 <div className="book-meta">
                                     <span className="genre-badge">{book.genre}</span>
+                                    {book.isRead && (
+                                        <span className="read-badge" style={{ 
+                                            display: 'inline-flex', 
+                                            alignItems: 'center', 
+                                            gap: '0.25rem',
+                                            backgroundColor: '#4CAF50',
+                                            color: 'white',
+                                            padding: '0.25rem 0.5rem',
+                                            borderRadius: '4px',
+                                            fontSize: '0.875rem'
+                                        }}>
+                                            <FaCheckCircle />
+                                            Read
+                                        </span>
+                                    )}
                                     {book.isbn && (
                                         <span className="isbn-badge">ISBN: {book.isbn}</span>
                                     )}

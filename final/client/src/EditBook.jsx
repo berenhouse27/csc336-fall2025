@@ -30,7 +30,8 @@ function EditBook({ books, updateBook }) {
         isbn: '',
         rating: '',
         readDate: '',
-        notes: ''
+        notes: '',
+        isRead: false
     })
 
     const [errors, setErrors] = useState({})
@@ -49,7 +50,8 @@ function EditBook({ books, updateBook }) {
                 isbn: book.isbn || '',
                 rating: book.rating ? book.rating.toString() : '',
                 readDate: book.readDate || '',
-                notes: book.notes || ''
+                notes: book.notes || '',
+                isRead: book.isRead || false
             })
         }
     }, [book])
@@ -73,10 +75,10 @@ function EditBook({ books, updateBook }) {
 
     // Handle input changes
     const handleChange = (e) => {
-        const { name, value } = e.target
+        const { name, value, type, checked } = e.target
         setFormData(prev => ({
             ...prev,
-            [name]: value
+            [name]: type === 'checkbox' ? checked : value
         }))
 
         if (errors[name]) {
@@ -248,7 +250,8 @@ function EditBook({ books, updateBook }) {
                 isbn: formData.isbn.trim() || undefined,
                 rating: formData.rating ? parseInt(formData.rating) : undefined,
                 readDate: formData.readDate || undefined,
-                notes: formData.notes.trim() || undefined
+                notes: formData.notes.trim() || undefined,
+                isRead: formData.isRead || undefined
             }
 
             const result = await updateBook(bookId, updatedBook)
@@ -437,6 +440,20 @@ function EditBook({ books, updateBook }) {
                     {errors.rating && touched.rating && (
                         <span className="error-text">{errors.rating}</span>
                     )}
+                </div>
+
+                <div className="form-group">
+                    <label htmlFor="isRead" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', cursor: 'pointer' }}>
+                        <input
+                            type="checkbox"
+                            id="isRead"
+                            name="isRead"
+                            checked={formData.isRead}
+                            onChange={handleChange}
+                            style={{ width: 'auto', cursor: 'pointer' }}
+                        />
+                        <span>Mark as read (optional)</span>
+                    </label>
                 </div>
 
                 <div className="form-group">

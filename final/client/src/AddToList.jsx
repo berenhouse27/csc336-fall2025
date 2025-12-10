@@ -1,5 +1,5 @@
-import { useState } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { useState, useEffect } from 'react'
+import { useNavigate, useLocation } from 'react-router-dom'
 import { FaBook, FaUser, FaTags, FaBarcode, FaStar, FaCalendar, FaStickyNote, FaCheckCircle, FaExclamationCircle } from 'react-icons/fa'
 
 const GENRES = [
@@ -18,6 +18,7 @@ const GENRES = [
 
 function AddToList({ addBook, books }) {
     const navigate = useNavigate()
+    const location = useLocation()
 
     const [formData, setFormData] = useState({
         title: '',
@@ -26,8 +27,27 @@ function AddToList({ addBook, books }) {
         isbn: '',
         rating: '',
         readDate: '',
-        notes: ''
+        notes: '',
+        isRead: false
     })
+
+    // Initialize form with pre-filled data if coming from search
+    useEffect(() => {
+        if (location.state?.preFilledBook) {
+            setFormData({
+                title: location.state.preFilledBook.title || '',
+                author: location.state.preFilledBook.author || '',
+                genre: location.state.preFilledBook.genre || '',
+                isbn: location.state.preFilledBook.isbn || '',
+                rating: location.state.preFilledBook.rating || '',
+                readDate: location.state.preFilledBook.readDate || '',
+                notes: location.state.preFilledBook.notes || '',
+                isRead: location.state.preFilledBook.isRead || false
+            })
+            // Clear the state to prevent re-filling on re-render
+            window.history.replaceState({}, document.title)
+        }
+    }, [location.state])
 
     const [errors, setErrors] = useState({})
     const [touched, setTouched] = useState({})
@@ -36,10 +56,10 @@ function AddToList({ addBook, books }) {
     const [error, setError] = useState('')
 
     const handleChange = (e) => {
-        const { name, value } = e.target
+        const { name, value, type, checked } = e.target
         setFormData(prev => ({
             ...prev,
-            [name]: value
+            [name]: type === 'checkbox' ? checked : value
         }))
 
         // Clear error when typing starts
@@ -218,7 +238,8 @@ function AddToList({ addBook, books }) {
                 isbn: formData.isbn.trim() || undefined,
                 rating: formData.rating ? parseInt(formData.rating) : undefined,
                 readDate: formData.readDate || undefined,
-                notes: formData.notes.trim() || undefined
+                notes: formData.notes.trim() || undefined,
+                isRead: formData.isRead || undefined
             }
 
             // Add book with API
@@ -233,7 +254,8 @@ function AddToList({ addBook, books }) {
                     isbn: '',
                     rating: '',
                     readDate: '',
-                    notes: ''
+                    notes: '',
+                    isRead: false
                 })
                 setTouched({})
                 setErrors({})
@@ -418,6 +440,20 @@ function AddToList({ addBook, books }) {
                     {errors.rating && touched.rating && (
                         <span className="error-text">{errors.rating}</span>
                     )}
+                </div>
+
+                <div className="form-group">
+                    <label htmlFor="isRead" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', cursor: 'pointer' }}>
+                        <input
+                            type="checkbox"
+                            id="isRead"
+                            name="isRead"
+                            checked={formData.isRead}
+                            onChange={handleChange}
+                            style={{ width: 'auto', cursor: 'pointer' }}
+                        />
+                        <span>Mark as read (optional)</span>
+                    </label>
                 </div>
 
                 <div className="form-group">

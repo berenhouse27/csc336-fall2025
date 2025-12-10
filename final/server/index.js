@@ -90,7 +90,8 @@ function normalizeBook(book) {
         isbn: book.isbn ? book.isbn.trim() : undefined,
         rating: book.rating ? parseInt(book.rating) : undefined,
         readDate: book.readDate,
-        notes: book.notes ? book.notes.trim() : undefined
+        notes: book.notes ? book.notes.trim() : undefined,
+        isRead: book.isRead !== undefined ? Boolean(book.isRead) : undefined
     };
 }
 

@@ -1,5 +1,5 @@
 import { Link, useLocation } from 'react-router-dom'
-import { FaHome, FaBook, FaPlus } from 'react-icons/fa'
+import { FaHome, FaBook, FaPlus, FaSearch } from 'react-icons/fa'
 
 function Navigation() {
     const location = useLocation()
@@ -36,6 +36,13 @@ function Navigation() {
                     >
                         <FaPlus className="nav-icon" />
                         <span>Add Book</span>
+                    </Link>
+                    <Link
+                        to="/search-books"
+                        className={`nav-link ${isActive('/search-books') ? 'active' : ''}`}
+                    >
+                        <FaSearch className="nav-icon" />
+                        <span>Search Books</span>
                     </Link>
                 </div>
             </div>

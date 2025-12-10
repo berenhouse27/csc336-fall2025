@@ -6,6 +6,7 @@ import List from './List.jsx'
 import AddToList from './AddToList.jsx'
 import EditBook from './EditBook.jsx'
 import Navigation from './Navigation.jsx'
+import SearchBooks from './SearchBooks.jsx'
 
 const API_BASE_URL = import.meta.env.VITE_API_URL || '/api'
 
@@ -128,6 +129,7 @@ function App() {
                         <Route path="/books" element={<List books={books} updateBook={updateBook} deleteBook={deleteBook} />} />
                         <Route path="/add-book" element={<AddToList addBook={addBook} books={books} />} />
                         <Route path="/edit-book/:id" element={<EditBook books={books} updateBook={updateBook} />} />
+                        <Route path="/search-books" element={<SearchBooks addBook={addBook} books={books} />} />
                     </Routes>
                 </main>
             </div>
