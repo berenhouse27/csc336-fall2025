@@ -230,7 +230,6 @@ function AddToList({ addBook, books }) {
 
         // Client-side validation
         if (validateForm()) {
-            // Prepare book object
             const newBook = {
                 title: formData.title.trim(),
                 author: formData.author.trim(),
@@ -263,7 +262,7 @@ function AddToList({ addBook, books }) {
                     setSubmitSuccess(false)
                 }, 3000)
             } else {
-                // Handle server validation errors
+                // Handle server errors
                 if (result.errors) {
                     setErrors(prev => ({
                         ...prev,
@@ -276,7 +275,7 @@ function AddToList({ addBook, books }) {
         setIsSubmitting(false)
     }
 
-    // Render star rating selector
+    // Star rating selector
     const starSelector = () => {
         const rating = formData.rating ? parseInt(formData.rating) : 0
         return (
